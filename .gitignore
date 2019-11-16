@@ -1,1 +1,4 @@
 __pycache__/
+*.xml
+*.iml
+*.idea
