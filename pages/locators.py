@@ -11,3 +11,4 @@ class ProductPageLocators():
     SUBMIT_BUTTON = (By.CSS_SELECTOR, ".btn-add-to-basket")
     PRICE = (By.CSS_SELECTOR, "div.product_main p.price_color")
     NAME_OF_PRODUCT = (By.CSS_SELECTOR,"div.product_main h1")
+    PRODUCT_ADDED = (By.CSS_SELECTOR, "div.alert:nth-child(1) strong")
