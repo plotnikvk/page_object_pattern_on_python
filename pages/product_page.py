@@ -6,10 +6,6 @@ class ProductPage(BasePage):
     def press_submit_button(self):
         self.browser.find_element(*ProductPageLocators.SUBMIT_BUTTON).click()
 
-    def go_to_basket_page(self):
-        basket_link = self.browser.find_element(*MainPageLocators.WATCH_BASKET_BUTTON)
-        basket_link.click()
-
     def check_price(self, price):
         fact_price = self.browser.find_element(*ProductPageLocators.PRICE).text
         assert price == fact_price, "Price is different!"

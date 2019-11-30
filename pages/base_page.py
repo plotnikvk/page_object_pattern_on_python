@@ -5,11 +5,18 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from .locators import MainPageLocators
+
+
 class BasePage():
     def __init__(self, browser, url, timeout=10):
         self.browser = browser
         self.url = url
         self.browser.implicitly_wait(timeout)
+
+    def go_to_basket_page(self):
+        basket_link = self.browser.find_element(*MainPageLocators.WATCH_BASKET_BUTTON)
+        basket_link.click()
 
     def open(self):
         self.browser.get(self.url)
